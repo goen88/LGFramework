@@ -1,0 +1,25 @@
+<?php
+/**
+ * api工程目录配置文件
+ * @author gaorunqiao<goen88@163.com> 
+ */
+
+//自定义配置
+define('LG_IMG_DIR',''); //系统图片存储目录
+define('LG_IMG_URL','http://127.0.0.1:85'); //系统图片URL地址
+
+
+#==必要配置文件 start=====================================
+//系统工程目录
+if(!defined("LG_ROOT")){
+	define("LG_ROOT", dirname(dirname(dirname(dirname(__FILE__)))) );
+}
+//web根目录
+define("LG_WEB_ROOT", dirname(dirname(__FILE__)) );
+
+#==选择配置 end=====================================
+//是否开启调试模式，上线后关闭
+define("LG_DEBUG",true);
+
+//加载系统文件初始化文件,必要
+require_once(LG_ROOT.DIRECTORY_SEPARATOR."common".DIRECTORY_SEPARATOR."conf".DIRECTORY_SEPARATOR."bootstrap.php");

@@ -1,0 +1,31 @@
+CREATE TABLE `system_session_data` (
+  `session_id` varchar(32) NOT NULL default '',
+  `hash` varchar(32) NOT NULL default '',
+  `session_data` blob NOT NULL,
+  `session_expire` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`session_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+--示例数据数据库脚本
+CREATE TABLE IF NOT EXISTS `sg_users` (
+  `uid` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `order_id` int(11) NOT NULL DEFAULT '0' COMMENT '排序ID',
+  `email` varchar(60) NOT NULL DEFAULT '' COMMENT '用户邮箱',
+  `username` varchar(60) NOT NULL DEFAULT '' COMMENT '用户登陆名',
+  `truename` varchar(20) NOT NULL COMMENT '真实姓名',
+  `nickname` varchar(20) NOT NULL COMMENT '昵称',
+  `password` varchar(64) NOT NULL DEFAULT '' COMMENT '用户密码',
+  `emotion` varchar(255) NOT NULL DEFAULT '' COMMENT '个性签名',
+  `province` varchar(16) NOT NULL DEFAULT '' COMMENT '省',
+  `city` varchar(16) NOT NULL COMMENT '城市',
+  `area` varchar(16) NOT NULL COMMENT '区域',
+  `address` varchar(64) NOT NULL COMMENT '地址',
+  `workplace` varchar(64) NOT NULL COMMENT '工作单位',
+  `school` varchar(32) NOT NULL COMMENT '学校',
+  `duty` varchar(128) NOT NULL COMMENT '职业',
+  `sex` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '用户性别',
+  PRIMARY KEY (`uid`),
+  UNIQUE KEY `mobile_phone` (`mobile_phone`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

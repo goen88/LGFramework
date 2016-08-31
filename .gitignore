@@ -1,0 +1,15 @@
+*.log
+.project
+.buildpath
+.idea
+*DS_Store
+.settings/
+*.buildpath
+config_const_var.php
+common/conf/db.php
+*.html.php
+*.htm.php
+site/upload/html/ware/
+*.tpl.php
+cmd/db/config.php
+site/upload/html/Public/

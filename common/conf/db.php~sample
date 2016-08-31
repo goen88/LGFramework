@@ -1,0 +1,27 @@
+<?php
+/**
+ * 系统配置文件
+ * 
+ */
+
+//mysql数据库配置文件，可修改
+define("LG_MYSQL_HOST","127.0.0.1");
+define("LG_MYSQL_USER","root");
+define("LG_MYSQL_PASS","123");
+define("LG_MYSQL_DBNAME","shoppingguide");
+
+
+//定义Memcache配置
+define('LG_MEMCACHE_HOST', 'localhost');
+define('LG_MEMCACHE_PORT', 11211);
+define('LG_MEMCACHE_EXPIRATION', 0);
+define('LG_MEMCACHE_PREFIX', 'iliangcang');
+define('LG_MEMCACHE_COMPRESSION', FALSE);
+
+
+//定义Redis配置
+define('LG_REDIS_HOST', "127.0.0.1");
+define('LG_REDIS_PORT', 6379);
+
+//定义搜索数据源地址
+define('LG_SEARCH_ENGINE_HOST', "http://127.0.0.1:0000");

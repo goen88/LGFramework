@@ -1,0 +1,31 @@
+<?php
+/**
+ * backend 工程目录配置文件
+ * @author gaorunqiao<goen88@163.com> 
+ */
+
+//系统工程目录
+if(!defined("LG_ROOT")){
+	define("LG_ROOT", dirname(dirname(dirname(dirname(__FILE__)))) );
+}
+
+#==必要配置文件 start=====================================
+//web根目录
+define("LG_WEB_ROOT", dirname(dirname(__FILE__)) );
+
+#==选择配置 end=====================================
+//是否开启调试模式，上线后关闭
+define("LG_DEBUG",true);
+//控制器认证，默认关闭
+define("LG_AUTHENTICATION",false);
+//是否开启smary模板引擎，默认关闭
+define("LG_TEMPLATES_ENGINE",true); 
+//1-分离模式，controller文件放在action_prog和类名相同的目录，建议和LG_TEMPLATES_ENGINE_MODE同时使用
+define("LG_ACTION_MODE",1);
+//模板引擎模式：0->共享模式，模板文件放在LG_TEMPLATES_DIR配置中；
+//1-分离模式，模板文件和controller同目录,建议和LG_ACTION_MODE同时使用
+define("LG_TEMPLATES_ENGINE_MODE",1);
+
+
+//加载系统文件初始化文件,必要
+require_once(LG_ROOT.DIRECTORY_SEPARATOR."common".DIRECTORY_SEPARATOR."conf".DIRECTORY_SEPARATOR."bootstrap.php");
